@@ -9,6 +9,7 @@ data:
       bind_address = "0.0.0.0"
       bind_port = "8081"
       registration_uds_path = "/run/spire/sockets/registration.sock"
+      # NOTE: Change this to your trust domain
       trust_domain = "example.org"
       data_dir = "/run/spire/data"
       log_level = "DEBUG"
@@ -29,6 +30,7 @@ data:
       # use for the OIDC discovery document (configured in the oidc-discovery-provider
       # config file
       jwt_issuer = "https://example.org"
+
       
       upstream_bundle = true
       svid_ttl = "1h"
@@ -51,7 +53,7 @@ data:
         plugin_data {
           clusters = {
             # NOTE: Change this to your cluster name
-            "demo-cluster" = {
+            "oidc-provider-example" = {
               use_token_review_api_validation = true
               service_account_whitelist = ["spire:spire-agent"]
             }

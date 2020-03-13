@@ -12,6 +12,7 @@ data:
       server_port = "8081"
       socket_path = "/run/spire/sockets/agent.sock"
       trust_bundle_path = "/run/spire/bundle/bundle.crt"
+      # NOTE: Change this to your trust domain
       trust_domain = "example.org"
     }
 
@@ -19,7 +20,7 @@ data:
       NodeAttestor "k8s_sat" {
         plugin_data {
           # NOTE: Change this to your cluster name
-          cluster = "demo-cluster"
+          cluster = "oidc-provider-example"
         }
       }
 

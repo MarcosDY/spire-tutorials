@@ -6,12 +6,14 @@ metadata:
 data:
   oidc-discovery-provider.conf: |
     log_level = "INFO"
-    domain = "example.com"
+    # NOTE: Change this to your trust domain
+    omain = "example.org"
     acme {
         directory_url = "https://acme-staging-v02.api.letsencrypt.org/directory"
         cache_dir = "/run/spire"
         tos_accepted = true
-        # TODO: replace it with a generic email?
+        # TODO: ASK for an info or generic email
+        # NOTE: Change this to your email
         email = "marcos@scytale.io"
     }
     registration_api {

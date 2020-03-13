@@ -61,9 +61,11 @@ apply_server_config() {
 	kubectl apply -f ${CONFDIR}/server-account.yaml > /dev/null
 	kubectl apply -f ${CONFDIR}/server-cluster-role.yaml > /dev/null
 	kubectl apply -f ${CONFDIR}/server-configmap.yaml > /dev/null
+  kubectl apply -f ${CONFDIR}/oidc-dp-configmap.yaml > /dev/null
 	kubectl apply -f ${CONFDIR}/spire-bundle-configmap.yaml > /dev/null
 	kubectl apply -f ${CONFDIR}/server-statefulset.yaml > /dev/null
 	kubectl apply -f ${CONFDIR}/server-service.yaml > /dev/null
+	kubectl apply -f ${CONFDIR}/server-oidc-service.yaml > /dev/null
 	echo "${green}ok.${norm}"
 }
 
