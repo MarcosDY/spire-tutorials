@@ -9,7 +9,6 @@ data:
       bind_address = "0.0.0.0"
       bind_port = "8081"
       registration_uds_path = "/run/spire/sockets/registration.sock"
-      # NOTE: Change this to your trust domain
       trust_domain = "example.org"
       data_dir = "/run/spire/data"
       log_level = "DEBUG"
@@ -27,8 +26,7 @@ data:
       ca_key_type = "rsa-2048"
     
       # Creates the iss claim in JWT-SVIDs.  This should be the same domain that you
-      # use for the OIDC discovery document (configured in the oidc-discovery-provider
-      # config file
+      # use for the OIDC discovery document (configured in the oidc-dp-configmap.yaml)
       jwt_issuer = "https://example.org"
 
       
@@ -53,7 +51,7 @@ data:
         plugin_data {
           clusters = {
             # NOTE: Change this to your cluster name
-            "oidc-provider-example" = {
+            "demo-cluster" = {
               use_token_review_api_validation = true
               service_account_whitelist = ["spire:spire-agent"]
             }

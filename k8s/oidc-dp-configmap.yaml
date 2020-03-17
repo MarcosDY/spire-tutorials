@@ -6,15 +6,14 @@ metadata:
 data:
   oidc-discovery-provider.conf: |
     log_level = "INFO"
-    # NOTE: Change this to your trust domain
-    omain = "example.org"
+    # NOTE: Change DOMAIN with the domain where provider will be hosted under
+    domain = "DOMAIN"
     acme {
         directory_url = "https://acme-staging-v02.api.letsencrypt.org/directory"
         cache_dir = "/run/spire"
         tos_accepted = true
-        # TODO: ASK for an info or generic email
-        # NOTE: Change this to your email
-        email = "marcos@scytale.io"
+        # NOTE: Change EMAIL_ADDRESS with your email
+        email = "EMAIL_ADDRESS"
     }
     registration_api {
         socket_path = "/run/spire/sockets/registration.sock"

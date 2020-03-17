@@ -9,6 +9,7 @@ spec:
         - spire.oidc-tutorial.org
       secretName: oidc-secret
   rules:
+    # Replace with Fully Qualified Domain Name (FQDN) for the discovery provider.
     - host: spire.oidc-tutorial.org
       http:
         paths:

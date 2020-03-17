@@ -147,7 +147,7 @@ replace:
 ***
 
 ```
-$ AWS_ROLE_ARN=${ROLE-NAME-ARN} AWS_WEB_IDENTITY_TOKEN_FILE=token aws s3 cp s3://oidc-tutorial-bucket/test.txt test.txtt
+$ AWS_ROLE_ARN=${ROLE-NAME-ARN} AWS_WEB_IDENTITY_TOKEN_FILE=token aws s3 cp s3://oidc-tutorial-bucket/test.txt test.txt
 ```
 
 ## Clean
