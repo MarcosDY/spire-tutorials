@@ -24,10 +24,10 @@ data:
       } 
       #AWS requires the use of RSA.  EC cryptography is not supported
       ca_key_type = "rsa-2048"
-    
-      # Creates the iss claim in JWT-SVIDs. This should be the same domain that you
-      # use for the OIDC discovery document (configured in the oidc-dp-configmap.yaml).
-      jwt_issuer = "MY_DISCOVERY_DOMAIN"
+
+      # Creates the iss claim in JWT-SVIDs.
+      # TODO: Replace MY_DISCOVERY_DOMAIN with the FQDN of the Discovery Provider that you configured in DNS
+      jwt_issuer = "https://MY_DISCOVERY_DOMAIN"
 
       upstream_bundle = true
       svid_ttl = "1h"
