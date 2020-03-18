@@ -6,11 +6,12 @@ metadata:
 spec:
   tls:
     - hosts:
-        - spire.oidc-tutorial.org
+        # TODO: Replace MY_DISCOVERY_DOMAIN with the FQDN of the Discovery Provider that you configured in DNS
+        - MY_DISCOVERY_DOMAIN
       secretName: oidc-secret
   rules:
-    # Replace with Fully Qualified Domain Name (FQDN) for the discovery provider.
-    - host: spire.oidc-tutorial.org
+    # TODO: Replace MY_DISCOVERY_DOMAIN with the FQDN of the Discovery Provider that you configured in DNS
+    - host: MY_DISCOVERY_DOMAIN
       http:
         paths:
           - path: /.well-known/openid-configuration

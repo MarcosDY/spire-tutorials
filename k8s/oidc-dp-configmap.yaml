@@ -6,14 +6,14 @@ metadata:
 data:
   oidc-discovery-provider.conf: |
     log_level = "INFO"
-    # NOTE: Change DOMAIN with the domain where provider will be hosted under
-    domain = "DOMAIN"
+    # NOTE: Replace MY_DISCOVERY_DOMAIN with the OIDC Discovery Provider FQDN
+    domain = MY_DISCOVERY_DOMAIN
     acme {
         directory_url = "https://acme-staging-v02.api.letsencrypt.org/directory"
         cache_dir = "/run/spire"
         tos_accepted = true
-        # NOTE: Change EMAIL_ADDRESS with your email
-        email = "EMAIL_ADDRESS"
+        # NOTE: Change MY_EMAIL_ADDRESS with your email
+        email = "MY_EMAIL_ADDRESS"
     }
     registration_api {
         socket_path = "/run/spire/sockets/registration.sock"
